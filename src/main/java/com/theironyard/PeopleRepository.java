@@ -46,7 +46,9 @@ public class PeopleRepository {
         if(person.getPersonId() == null){
             template.update("INSERT INTO person(title,firstname,middlename,lastname,suffix) " +
                             "VALUES (?,?,?,?,?)",
-                    new Object[]{person.getTitle(),person.getFirstName(),person.getMiddleName(),
+                    new Object[]{person.getTitle(),
+                            person.getFirstName(),
+                            person.getMiddleName(),
                             person.getLastName(),
                             person.getSuffix()});
         }
